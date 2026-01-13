@@ -74,9 +74,10 @@ From VSC View/Command Palette, choose Python: Create Terminal
 Ran:
 conda env update -n librosa-dev --file .github/environment-ci.yml
 conda activate librosa-dev
-python -m pip install -e '.[tests]' - failed! Works on Mac, but [extras] falied on WinOS
-   python -m pip install -e .  - worked, reads off pyproject.toml
-
+python -m pip install -e '.[tests]' : failed in WinOS Anaconda venv. Works on Mac, but [extras] falied on WinOS
+   Inspection of Mac pip install log shows all requirements alraedy satisfied, then went to pyprojects.toml.
+python -m pip install -e .  : worked in WinOS, reads off pyproject.toml
+   Produces same output as above on MacOS
 From AI Overview:
    The difference between pip install -e . and pip install -e '.[tests]' is that the second command installs the package in editable mode along with the additional dependencies required for testing, as defined in your project's configuration file (e.g., pyproject.toml or setup.py). 
    [tests]: This is an "extra" or "optional dependency group". It tells pip to install the dependencies listed under the specifically named tests section in your pyproject.toml or setup.py file, in addition to the main dependencies.
@@ -89,3 +90,6 @@ ipykernel was missing. Can't run Jupyter without it
 
 docs/examples
 mir_eval is missing
+presets is missing
+
+TODO: Build Jupyter for STX
