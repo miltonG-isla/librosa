@@ -58,3 +58,11 @@ Work on this copy on your computer using Git to do the version control. You can 
    (librosa-dev)% git push --set-upstream origin librosa-qi
 
 Verify on GitHub
+
+NOTES: 
+Tried running: tests/make_mel_norm_test_data Jupyter
+ipykernel was missing. Can't run Jupyter without it
+'data/feature-melfb-001.mat' is empty, requires Matlab to run
+
+docs/examples
+mir_eval is missing
