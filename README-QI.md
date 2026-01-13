@@ -50,3 +50,11 @@ and start making changes. Never work in the main branch!
 Work on this copy on your computer using Git to do the version control. You can check your modified files using:
 
    $ git status 
+
+7. Use VSCode Git interface to opdate
+
+8. The first time around, using the Python terminal, to record your branch changes in Git, push them to GitHub with:
+
+   (librosa-dev)% git push --set-upstream origin librosa-qi
+
+Verify on GitHub
