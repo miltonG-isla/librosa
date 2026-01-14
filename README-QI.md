@@ -1,4 +1,5 @@
 Prepared by M. Garces, UH ISLA/ARL
+20260114T00Z
 These notes are specific to implementing a fork and a branch via VSCode and a Conda environment.
 It builds on the detailed instructions provided in:
 https://github.com/librosa/librosa?tab=contributing-ov-file
@@ -20,10 +21,11 @@ Clone to a local directory
 This automatically does:
    $ cd librosa 
    $ git pull --recurse-submodules
+
 3. $ git remote add upstream git@github.com:librosa/librosa.git
 So no need to do again, but if one does, nothing bad happens.
 
-Next is as in URL, but recommend using latest stable supported version 3.12
+Next is as in URL, recommend using latest stable supported version 3.12
 4. Create a new conda environment in order to install dependencies:
 
    $ conda create -n librosa-dev python=3.12
@@ -60,8 +62,8 @@ Work on this copy on your computer using Git to do the version control. You can 
 
 Verify on GitHub
 
-VSCode clone on PC with Anaconda:
-There are USG licensing issues with Anaconda, but ISLA/ARL supports it and this section documentis it.
+### VSCode clone on PC with Anaconda:
+There are USG licensing issues with Anaconda, but UH ISLA/ARL supports it and this section documentis it.
 Used the Anaconda Prompt to accept the TOR's, without which things grind to a halt.
 Since my code fork/branch already exists (created from Mac), I use the VSC to clone from my fork/branch from GitHub
 I the Anaconda Navigator to create a new Python 3.12 Conda environment, and added the conda-forge channel.
@@ -85,10 +87,12 @@ From AI Overview:
 
 NOTES: 
 Tried running: tests/make_mel_norm_test_data Jupyter
-ipykernel was missing. Can't run Jupyter without it
+ipykernel is missing
+Can't run Jupyter without it
 'data/feature-melfb-001.mat' is empty, requires Matlab to run
 
 docs/examples
+These two are in environemnt-docs.yml
 mir_eval is missing
 presets is missing
 
