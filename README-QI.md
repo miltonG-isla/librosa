@@ -85,15 +85,22 @@ From AI Overview:
    [tests]: This is an "extra" or "optional dependency group". It tells pip to install the dependencies listed under the specifically named tests section in your pyproject.toml or setup.py file, in addition to the main dependencies.
    Noted the pyprojects.toml file does not have a tests section.
 
-NOTES: 
+NOTES:
+git/environment-ci is not a complete dependency list
 Tried running: tests/make_mel_norm_test_data Jupyter
 ipykernel is missing
 Can't run Jupyter without it
 'data/feature-melfb-001.mat' is empty, requires Matlab to run
 
-docs/examples
-These two are in environemnt-docs.yml
-mir_eval is missing
-presets is missing
+To run docs/examples
+run git/environemnt-docs.yml
+   conda env update -n librosa-dev --file .github/environment-docs.yml
+Has:
+mir_eval
+presets
+
+Removed numpy<1.24 due to incompatibility with python3.12
+Added ipykernel
+Added ipywidgets
 
 TODO: Build Jupyter for STX
